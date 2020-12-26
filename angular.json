@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "GMC"
+  "defaultProject": "GMC",
+  "cli": {
+    "analytics": "afcd1adb-2fa6-4c72-935c-b65f7bce6e40"
+  }
 }
