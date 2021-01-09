@@ -1,0 +1,17 @@
+<app-detail-component [personC]="perC"></app-detail-component>
+
+   
+    
+        <FORM>
+            <div *ngFor='let p of cv let i=index'  (click)="sendP(p)">
+
+            <SELECT name="kk" size="1">
+               
+            <OPTION>{{p.firstname}}
+          
+               </SELECT>
+            </div>
+        </FORM>
+   
+        
+
