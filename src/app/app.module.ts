@@ -10,6 +10,7 @@ import { ChildComponent } from './child/child.component';
 import { ListComponentComponent } from './list-component/list-component.component';
 import { DetailComponentComponent } from './detail-component/detail-component.component';
 import { CvComponent } from './cv/cv.component';
+import { DirectiveComponent } from './directive/directive.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CvComponent } from './cv/cv.component';
     ChildComponent,
     ListComponentComponent,
     DetailComponentComponent,
-    CvComponent
+    CvComponent,
+    DirectiveComponent
   ],
   imports: [
     BrowserModule,

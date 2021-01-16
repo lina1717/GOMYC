@@ -1,0 +1,33 @@
+
+<p [ngStyle]="{
+
+    color: color,
+    tsize: size +'px',
+    font: font
+
+}"
+
+>Voici mon paragraphe</p>
+<div class="ROW">
+<div class="COL-md-4">
+   Color : <input type="text" class="form-control" [(ngModel)]="color">
+</div>
+
+
+<div class="COL-md-4">
+Size : <input type="number" class="form-control" [(ngModel)]="size">
+</div>
+
+
+<div class="form-control">
+    fonts :
+    <select  class="COL-md-4"  [(ngModel)]="font">
+        
+        <option value='Police'>Police</option>
+        <option value='Arial'>Arial</option>
+        <option value='Garamond'> Garamond</option>
+        <option value='Times new Roman'>Times new Roman</option>
+    </select>
+</div>
+
+</div>
