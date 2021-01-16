@@ -1,4 +1,7 @@
+<div>
+
 <p>child works!</p>
-<div [style.background-color]='parentcolor'>
-    la couleur de papa est : {{parentcolor}}
+    la couleur de papa est : {{favoritecolor}}
+<input #monInput>
+<button  (click)="changethecolor(monInput.value)" class="btn btn-primary">do</button> 
 </div>

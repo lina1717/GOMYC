@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-new',
@@ -6,20 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new.component.css']
 })
 export class NewComponent implements OnInit {
-  color ='red' 
+  
   constructor() { }
 
   ngOnInit(): void {
   }
   
-changethecolor(kk: string) {
-this.color='white';
-  
-
-}
-click(){
-  this.color='black'
-}
-  
+  @Input() personC : any  ;
 
 }

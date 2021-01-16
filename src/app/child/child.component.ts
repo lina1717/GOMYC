@@ -6,14 +6,25 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
-@Output() send =new EventEmitter();
 
-@Input() parentcolor: any;
+  changethecolor(kk: string) {
+    this.favoritecolor='blue';
+    }
+    click(){
+      this.favoritecolor='blue'
+    }
+  @Input()
+  favoritecolor = 'blue';
+
+  sendP(p:any){
+    this.favoritecolor=p;
+  }
+
+
   constructor() { }
+  
 
   ngOnInit(): void {
   }
-  sendto(){
-    this.send.emit('je suis la couleur bla bla');
-  }
+  
 }
