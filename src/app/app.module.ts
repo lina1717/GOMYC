@@ -11,6 +11,7 @@ import { ListComponentComponent } from './list-component/list-component.componen
 import { DetailComponentComponent } from './detail-component/detail-component.component';
 import { CvComponent } from './cv/cv.component';
 import { DirectiveComponent } from './directive/directive.component';
+import { ClassesComponent } from './classes/classes.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { DirectiveComponent } from './directive/directive.component';
     ListComponentComponent,
     DetailComponentComponent,
     CvComponent,
-    DirectiveComponent
+    DirectiveComponent,
+    ClassesComponent
   ],
   imports: [
     BrowserModule,
