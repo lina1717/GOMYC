@@ -1,6 +1,15 @@
-<p [ngClass]="{theme1 : theme === 'theme1',
+<p 
+appRainbow
+[in]="'pink'"
+[out]="'orange'"
+[ngClass]="{theme1 : theme === 'theme1',
     theme2 : theme === 'theme2',
-    theme3 : theme === 'theme3'}">classes works!</p>
+    theme3 : theme === 'theme3'}">classes worksvoili voilouu</p>
+    <input type="text" appRainbow>
+
+
+
+    <p appRainbow >bla bla bla</p>
 <button (click)="changetheme('theme1')" class="btn btn-primary">theme1</button>
 <button (click)="changetheme('theme2')" class="btn btn-primary">theme2</button>
 <button (click)="changetheme('theme3')" class="btn btn-primary">theme3</button>

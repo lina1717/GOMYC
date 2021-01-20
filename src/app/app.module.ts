@@ -12,6 +12,7 @@ import { DetailComponentComponent } from './detail-component/detail-component.co
 import { CvComponent } from './cv/cv.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { ClassesComponent } from './classes/classes.component';
+import { RainbowDirective } from './directive/rainbow.directive';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ClassesComponent } from './classes/classes.component';
     DetailComponentComponent,
     CvComponent,
     DirectiveComponent,
-    ClassesComponent
+    ClassesComponent,
+    RainbowDirective
   ],
   imports: [
     BrowserModule,
