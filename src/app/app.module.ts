@@ -13,6 +13,7 @@ import { CvComponent } from './cv/cv.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { ClassesComponent } from './classes/classes.component';
 import { RainbowDirective } from './directive/rainbow.directive';
+import { ParagraphComponent } from './paragraph/paragraph.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { RainbowDirective } from './directive/rainbow.directive';
     CvComponent,
     DirectiveComponent,
     ClassesComponent,
-    RainbowDirective
+    RainbowDirective,
+    ParagraphComponent
   ],
   imports: [
     BrowserModule,
