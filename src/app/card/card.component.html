@@ -1,10 +1,29 @@
+=
+   
+<FORM>
+    <div *ngFor='let p of personnes let i=index'   (selectPersonne)="selectPersonneFromItem($event)">
+
+    <SELECT name="kk" size="1">
+       
+    <OPTION>{{p.firstname}}
+  
+       </SELECT>
+    </div>
+</FORM>
+
+
+
+
+
+
+ 
 <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 TWO WAY BINDING
 
 
 <div class="cont">
     <div class="cardDiv">
-        <div class="card-container">
+        <div class="card-container" ngIf="prenom">
             <div class="card">
                 <div class="front">
                     <div class="cover">
@@ -90,7 +109,7 @@ TWO WAY BINDING
             </div> <!-- end card -->
         </div> <!-- end card-container -->
     </div>
-    <div class="formDiv">
+    <!--div class="formDiv">
         <div class="new">
             Nom: <input type="text" class="form-control" [(ngModel)]='nom'>
             <hr>
@@ -104,5 +123,5 @@ TWO WAY BINDING
             <hr>
             Mots clé de votre travail : <input type="text" class="form-control" [(ngModel)]='mc'>
         </div>
-    </div>
+    </div-->
 </div>

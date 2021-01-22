@@ -14,6 +14,7 @@ import { DirectiveComponent } from './directive/directive.component';
 import { ClassesComponent } from './classes/classes.component';
 import { RainbowDirective } from './directive/rainbow.directive';
 import { ParagraphComponent } from './paragraph/paragraph.component';
+import { ListCardComponent } from './list-card/list-card.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ParagraphComponent } from './paragraph/paragraph.component';
     DirectiveComponent,
     ClassesComponent,
     RainbowDirective,
-    ParagraphComponent
+    ParagraphComponent,
+    ListCardComponent
   ],
   imports: [
     BrowserModule,
