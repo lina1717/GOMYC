@@ -15,6 +15,8 @@ import { ClassesComponent } from './classes/classes.component';
 import { RainbowDirective } from './directive/rainbow.directive';
 import { ParagraphComponent } from './paragraph/paragraph.component';
 import { ListCardComponent } from './list-card/list-card.component';
+import { DefaultImagePipe } from './pipes/default-image.pipe';
+import { ImageComponent } from './pipesComp/image/image.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { ListCardComponent } from './list-card/list-card.component';
     ClassesComponent,
     RainbowDirective,
     ParagraphComponent,
-    ListCardComponent
+    ListCardComponent,
+    DefaultImagePipe,
+    ImageComponent
   ],
   imports: [
     BrowserModule,
