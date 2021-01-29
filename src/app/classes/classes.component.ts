@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggerService } from '../services/logger.service';
+
 
 @Component({
   selector: 'app-classes',
@@ -9,11 +11,13 @@ export class ClassesComponent implements OnInit {
 
   theme='theme1';
 
-
-
-  constructor() { }
+  loggerService: any;
+  constructor(
+    loggerService: LoggerService
+  ) { }
 
   ngOnInit(): void {
+    this.loggerService.logger('salut je suis cv service')
   }
   changetheme(theme: string){
     this.theme = theme ;

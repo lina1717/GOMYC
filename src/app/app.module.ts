@@ -17,6 +17,7 @@ import { ParagraphComponent } from './paragraph/paragraph.component';
 import { ListCardComponent } from './list-card/list-card.component';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
 import { ImageComponent } from './pipesComp/image/image.component';
+import { TodoComponent } from './todo/todo.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ImageComponent } from './pipesComp/image/image.component';
     ParagraphComponent,
     ListCardComponent,
     DefaultImagePipe,
-    ImageComponent
+    ImageComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
