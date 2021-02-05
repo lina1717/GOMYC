@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { from } from 'rxjs';
+import { CvService } from '../cv/services/cv.service';
 import { Person } from '../list-card/Person';
 
 
@@ -10,24 +11,33 @@ import { Person } from '../list-card/Person';
 })
 export class ListCardComponent implements OnInit {
 
-  perC=null;
-  sendP(p:any){
-    this.perC=p;
-  }
+ // perC=null;
+  //sendP(p:any){
+   // this.perC=p;
+  //}
+ // p1=new Person(1,'sellaouti','aymen',37,7777 ,'teacher')
+ // p2=new Person(2,'sahli','lina', 32,7777 ,'teacher')
+  //p3=new Person(3,'sahli','ameni', 82,465 ,'teacher')
+  personnes: Person[] = [];
 
 
+ constructor() { }
 
-  p1=new Person(1,'sellaouti','aymen',37,7777 ,'teacher')
-  p2=new Person(2,'sahli','lina', 32,7777 ,'teacher')
-personnes : Person[]=[this.p1,this.p2];
-@Output() forwardPersonne =new EventEmitter();
-  constructor() { }
+ @Output() sendDatatoCv = new EventEmitter() ;
 
-  ngOnInit(){
+ processList(value: any) {
+   this.sendDatatoCv.emit(value)
+ }
+
+
+ ngOnInit(): void {
+   this.personnes=[
+ new Person(1,'sellaouti','aymen',37,7777 ,'teacher'),
+ new Person(2,'sahli','ameni', 82,465 ,'teacher')
  
-  }
-    selectPersonFromItem(personne:Person){
-    this.forwardPersonne.emit(personne);
-    
-    }
+   ]
+ }
+
 }
+
+

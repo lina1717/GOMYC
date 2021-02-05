@@ -1,0 +1,12 @@
+
+<div *ngFor="let pap of personnes">
+
+    <app-item 
+
+     [personne]=personnes[0]
+     (sendDatatoList)="processList($event)"
+      [path]="'Aymenjpg.jpg'"
+       [description]="'1'">
+    </app-item>
+  
+      </div>

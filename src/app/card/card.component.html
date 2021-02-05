@@ -1,128 +1,96 @@
-=
-   
-<FORM>
-    <div *ngFor='let p of personnes let i=index'  >
-        <!--(selectPersonne)="selectPersonneFromItem($event)"-->
 
-    <SELECT name="kk" size="1">
-       
-    <OPTION>{{p.firstname}}
-  
-       </SELECT>
-    </div>
-</FORM>
+
+<div>
+<div class="col-md-4">
+    <app-list-card (forwardPersonne)="selectPersonne($event)"></app-list-card>
+</div>
+<div class="row">
+
+   <app-embauche></app-embauche> 
+</div>
+</div>
 
 
 
 
 
-
- 
-<link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
-TWO WAY BINDING
-
-
-<div class="cont">
-    <div class="cardDiv">
-        <div class="card-container" ngIf="prenom">
-            <div class="card">
-                <div class="front">
-                    <div class="cover">
-                        <img src="../../assets/images/Aymenjpg.jpg" />
-                    </div>
-                    <div class="user">
-                        <img class="img-circle" src="../../assets/images/Aymenjpg.jpg" />
-                    </div>
-                    <div class="content">
-                        <div class="main">
-                            <h3 class="name">{{nom}} {{prenom}}</h3>
-                            <p class="profession">{{en}}</p>
-
-                            <p class="text-center">"{{c}}"</p>
-                        </div>
-                        <div class="footer">
-                            <div class="rating">
-                                <i class="fa fa-mail-forward"></i> Auto Rotation
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-                </div> <!-- end front panel -->
-
-
-
-
-
-
-
-
-
-                <div class="back">
-                    <div class="header">
-                        <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
-                    </div>
-                    <div class="content">
-                        <div class="main">
-                            <h4 class="text-center">{{v}}</h4>
-                            <p class="text-center">{{mc}}</p>
-
-                            <div class="stats-container">
-                                <div class="stats">
-                                    <h4>235</h4>
-                                    <p>
-                                        Followers
-                                    </p>
-                                </div>
-                                <div class="stats">
-                                    <h4>114</h4>
-                                    <p>
-                                        Following
-                                    </p>
-                                </div>
-                                <div class="stats">
-                                    <h4>35</h4>
-                                    <p>
-                                        Projects
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
+<div class="row">
+<app-list-card> </app-list-card>
+    <div  class="card-container" >
+        <div class="card">
+            <div class="front">
+                <div class="cover">
+                    <img src="../../assets/images/Aymenjpg.jpg" />
+                </div>
+                <div class="user">
+                    <img class="img-circle" src="../../assets/images/Aymenjpg.jpg" />
+                </div>
+                <div class="content">
+                    <div class="main">
+                        <h3 class="name">{{nameItem}}</h3>
+                        <p class="profession">{{job}} </p>
+                        <p class="text-center">{{description}}</p>
                     </div>
                     <div class="footer">
-                        <div class="social-links text-center">
-                            <a href="https://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
-                            <a href="https://creative-tim.com" class="google"><i
-                                    class="fa fa-google-plus fa-fw"></i></a>
-                            <a href="https://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
-                        </div>
+                        <i class="fa fa-mail-forward"></i> Auto Rotation
                     </div>
-                </div> <!-- end back panel -->
+                </div>
+            </div>
+            <div class="back">
+                <div class="header">
+                    <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                </div>
+                <div class="content">
+                    <div class="main">
+                        <h4 class="text-center">Job Description</h4>
+                        <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+  
+                        <div class="stats-container">
+                            <div class="stats">
+                                <h4>235</h4>
+                                <p>
+                                    Followers
+                                </p>
+                            </div>
+                            <div class="stats">
+                                <h4>114</h4>
+                                <p>
+                                    Following
+                                </p>
+                            </div>
+                            <div class="stats">
+                                <h4>35</h4>
+                                <p>
+                                    Projects
+                                </p>
+                            </div>
+                        </div>
+  
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="social-links text-center">
+                        <a href="https://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                        <a href="https://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                        <a href="https://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                    </div>
 
 
+                    <button class="btn btn-primary" (click)="embaucher()">Embaucher
 
-
-
-
-            </div> <!-- end card -->
-        </div> <!-- end card-container -->
-    </div>
-    <!--div class="formDiv">
-        <div class="new">
-            Nom: <input type="text" class="form-control" [(ngModel)]='nom'>
-            <hr>
-            Prénom: <input type="text" class="form-control" [(ngModel)]='prenom'>
-            <hr>
-            Job: <input type="text" class="form-control" [(ngModel)]='en'>
-            <hr>
-            Citation Favorite: <input type="text" class="form-control" [(ngModel)]='c'>
-            <hr>
-            Décrivez nous votre travail: <input type="text" class="form-control" [(ngModel)]='v'>
-            <hr>
-            Mots clé de votre travail : <input type="text" class="form-control" [(ngModel)]='mc'>
+                    </button>
+                </div>
+            </div>
         </div>
-    </div-->
-</div>
+    </div>
+  
+ 
+  </div>
+  
+
+
+
+
+
+
+

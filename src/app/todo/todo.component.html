@@ -3,8 +3,7 @@
 <div class="col-md-6">
 <ol class="list-group">
 <li class="list-group-item"
-    *ngFor="let todo of todos">
-{{todo.name}} : {{todo.content}}
+>
 <i class="fa fa-trash" aria-hidden="true" (click)="deleteTodo(todo)"></i>
 </li>
 </ol>
